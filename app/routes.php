@@ -20,5 +20,12 @@ Route::get('test', function()
 {
     $params = Input::get('test');
 
+    return Config::get('app.token');
+
     return $params;
+});
+
+Route::get('list', function()
+{
+
 });
