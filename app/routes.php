@@ -16,16 +16,4 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('test', function()
-{
-    $params = Input::get('test');
-
-    return Config::get('app.token');
-
-    return $params;
-});
-
-Route::get('list', function()
-{
-
-});
+Route::get('inviters/index', 'InvitersController@index');

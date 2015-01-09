@@ -1,0 +1,16 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+
+#filter-menu {
+  border-bottom: 1px solid gray;
+}
+
+#filter-menu .filter-head {
+  border-left: 1px solid gray;
+  text-align: center;
+  margin: 0.5em 0;
+}
