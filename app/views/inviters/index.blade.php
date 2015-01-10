@@ -1,4 +1,5 @@
 @section('body')
+
 <div id="filter-menu">
   <div class="pure-g">
     <div class="pure-u-1-3">
@@ -25,13 +26,16 @@
   </div>
 </div>
 
-@include('inviters.company_item')
-@include('inviters.company_item')
-@include('inviters.company_item')
-@include('inviters.company_item')
-@include('inviters.company_item')
-@include('inviters.company_item')
-@include('inviters.company_item')
-@include('inviters.company_item')
-@include('inviters.company_item')
+<div id="company-items">
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+  @include('inviters.company_item')
+</div>
+
 @stop
