@@ -14,4 +14,5 @@
   @include('inviters.company_item')
 </div>
 
+{{ HTML::script('js/inviters-index.js') }}
 @stop

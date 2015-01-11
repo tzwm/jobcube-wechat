@@ -17,3 +17,5 @@ Route::get('/', function()
 });
 
 Route::get('inviters/index', 'InvitersController@index');
+
+Route::get('inviters/show/{id}', 'InvitersController@show');

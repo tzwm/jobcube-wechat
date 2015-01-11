@@ -9,4 +9,8 @@ class InvitersController extends BaseController {
         $this->layout->content = View::make('inviters.index');
     }
 
+    public function show($id)
+    {
+        return $id;
+    }
 }
