@@ -1,9 +1,3 @@
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-  /* Set your content font stack here: */
-  font-family: Georgia, Times, "Times New Roman", serif;
-}
-
 .border-left {
   border-left: 1px solid gray;
 }
@@ -25,43 +19,59 @@ html, button, input, select, textarea,
   margin: 0.4em 0;
 }
 
-body {
-  padding-top: 2em;
-}
 
 #company-items {
+  margin-top: 2.5em;
+}
+
+.company-item {
+  width: 100%;
+  border-bottom: 1px solid #F0F2F4;
+  overflow: auto;
 }
 
 .company-log {
-  width: 100%;
+  float: left;
+  width: 20%;
+  max-width: 80px;
+  height: auto;
   border-radius: 50%;
   padding: 1em;
 }
 
 .company-info {
-  margin: 1em 0 1em 2em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #F0F2F4;
+  margin-top: 1em;
+  width: 45%;
+  display: inline-block;
+  overflow:hidden;
+}
+
+.company-info div  {
+  text-overflow: ellipsis;
+  overflow:hidden;
 }
 
 .company-info .company-name {
+  width: 100%;
   font-size: 1.2em;
+  margin-bottom: 0.2em;
 }
 
 .company-info .job-name {
+  width:100%;
   font-size: 1em;
 }
 
 .company-info .request-time {
+  width: 100%;
   color: gray;
   font-size: 0.8em;
 }
 
 .job-salary {
+  margin-top: 2.5em;
+  padding-right: 1em;
+  float:right;
   text-align: right;
   color: #DB5935;
-  margin-top: 3em;
-  margin-right: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #F0F2F4;
 }
