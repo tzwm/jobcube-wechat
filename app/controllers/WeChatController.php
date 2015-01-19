@@ -3,19 +3,19 @@
 
 class WeChatController extends Controller {
 
-    protected function checkSignature($signature, $timestamp, $nonce)
+    public function __construct()
     {
-        $token = Config::get('app.token');
-        $tmpArr = array($token, $timestamp, $nonce);
-        sort($tmpArr, SORT_STRING);
-        $tmpStr = implode( $tmpArr );
-        $tmpStr = sha1( $tmpStr );
+        $token = Config::get('wechat.token');
+        $appid = Config::get('wechat.appid');
+        $appsecret = Config::get('wechat.appsecret');
+        $this->wechat = new WeChat($token, $appid, $appsecret);
+    }
 
-        if( $tmpStr == $signature ){
-            return true;
-        }else{
-            return false;
-        }
+    public function test()
+    {
+        if (!$this->wechat->checkAccessToken())
+            $this->wechat->getAccessToken();
+        return Cache::get('access_token');
     }
 
     public function auth()
@@ -25,8 +25,7 @@ class WeChatController extends Controller {
         $nonce = Input::get('nonce');
         $echostr = Input::get('echostr');
 
-        $ret = $this->checkSignature($signature, $timestamp, $nonce);
+        $ret = $wechat->checkSignature($signature, $timestamp, $nonce);
         return $ret ? $echostr : "failure";
     }
-
 }

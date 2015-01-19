@@ -15,7 +15,6 @@ return array(
 
 	'debug' => true,
 
-    'token' => 'jobcube',
     'host' => '123.56.112.160',
     'api_server' => ''
 );

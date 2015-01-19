@@ -21,3 +21,5 @@ Route::get('inviters/index', 'InvitersController@index');
 Route::get('inviters/show/{id}', 'InvitersController@show');
 
 Route::get('wechat', 'WeChatController@auth');
+
+Route::get('wechat/test', 'WeChatController@test');
