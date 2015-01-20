@@ -5,12 +5,13 @@ class InvitersController extends BaseController {
 
     public function index()
     {
-        $this->layout->title = trans('inviters.title');
+        $this->layout->title = trans('inviters.index.title');
         $this->layout->content = View::make('inviters.index');
     }
 
     public function show($id)
     {
-        return $id;
+        $this->layout->title = trans('inviters.show.title');
+        $this->layout->content = View::make('inviters.show');
     }
 }

@@ -77,3 +77,60 @@
 }
 
 
+.box {
+  background-color: white;
+}
+
+.position {
+  margin-top: 1em;
+  padding: 0.7em;
+}
+
+.position .position-value {
+  margin-top: 0.2em;
+  font-size: 1.2em;
+  color: #3B99D5;
+}
+
+.company-intro {
+  padding: 0.7em 0em 0.7em 0.7em;
+  margin-top: 1em;
+
+}
+
+.company-intro .company-name {
+  font-size: 1.2em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.company-intro .company-intro-item {
+  padding: 0.7em 0em;
+}
+
+.company-intro .company-intro-item .company-intro-item-value {
+  color: #979797;
+  padding-left: 1em;
+}
+
+.position-info {
+  margin-top: 1em;
+  padding: 0.7em 0em 0.7em 0.7em;
+}
+
+.position-info .position-info-key {
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.position-info .position-info-value {
+  padding: 0.7em 0em;
+}
+
+.commit-btn {
+  padding: 0.4em;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  background-color: #EF613A;
+}
