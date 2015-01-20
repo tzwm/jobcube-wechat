@@ -8,6 +8,7 @@
       this.style.backgroundColor = 'white';
     });
     companyItems[i].addEventListener('click', function() {
+      window.location = '/inviters/show/1';
     });
   }
 
