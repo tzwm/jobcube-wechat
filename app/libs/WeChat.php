@@ -51,6 +51,16 @@ class WeChat {
         return true;
     }
 
+    public function getOAuthAccessToken($code)
+    {
+        $url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=" . $this->appid . "&secret=" . $this->secret . "$&code=" . $code . "&grant_type=authorization_code";
+        $res = $this->client->get($url);
+        if (!$this->checkResponseError($res))
+            return false;
+
+        return $res->json();
+    }
+
     private function checkResponseError($response)
     {
         if ($response->getStatusCode() !== 200) return false;

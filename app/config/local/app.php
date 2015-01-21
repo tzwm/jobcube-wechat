@@ -15,6 +15,6 @@ return array(
 
 	'debug' => true,
 
-    'host' => '123.56.112.160',
+    'host' => 'a.tzwm.me',
     'api_server' => ''
 );
