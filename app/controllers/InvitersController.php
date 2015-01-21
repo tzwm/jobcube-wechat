@@ -3,6 +3,14 @@
 class InvitersController extends BaseController {
     protected $layout = 'layouts.master';
 
+    public function __construct()
+    {        
+        $token = Config::get('wechat.token');
+        $appid = Config::get('wechat.appid');
+        $appsecret = Config::get('wechat.appsecret');
+        $this->wechat = new WeChat($token, $appid, $appsecret);
+    }
+
     public function index()
     {
         if (!Input::has('code') || !Input::has('state')) {
@@ -15,7 +23,7 @@ class InvitersController extends BaseController {
             return "Error State";
         }
 
-        $data = getOAuthAccessToken($code);
+        $data = $this->wechat->getOAuthAccessToken($code);
         $openid = $data['openid'];        
         return $openid;
 
