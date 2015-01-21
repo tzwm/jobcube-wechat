@@ -1,7 +1,6 @@
 <?php
 
 class InvitersController extends BaseController {
-    protected $layout = 'layouts.master';
 
     public function __construct()
     {        
@@ -24,15 +23,15 @@ class InvitersController extends BaseController {
         }
 
         $data = $this->wechat->getOAuthAccessToken($code);
-        $openid = $data['openid'];        
-        return $openid;
 
+        $this->layout = 'layouts.master';
         $this->layout->title = trans('inviters.index.title');
         $this->layout->content = View::make('inviters.index');
     }
 
     public function show($id)
     {
+        $this->layout = 'layouts.master';
         $this->layout->title = trans('inviters.show.title');
         $this->layout->content = View::make('inviters.show');
     }

@@ -25,7 +25,7 @@ class WeChatController extends Controller {
         $nonce = Input::get('nonce');
         $echostr = Input::get('echostr');
 
-        $ret = $wechat->checkSignature($signature, $timestamp, $nonce);
+        $ret = $this->wechat->checkSignature($signature, $timestamp, $nonce);
         return $ret ? $echostr : "failure";
     }
 }
