@@ -2,7 +2,7 @@
 
 <div class="position box">
   <div>{{{ trans('inviters.show.invite_you') }}}</div>
-  <div class="position-value">高级产品经理 [20K-30K]</div>
+  <div class="position-value">高级产品经理 <span>[20K-30K]</span></div>
 </div>
 
 <div class="company-intro box">
